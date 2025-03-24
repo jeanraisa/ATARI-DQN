@@ -1,4 +1,3 @@
-# !pip install sb3-contrib #installing required module
 import gymnasium as gym
 import numpy as np
 import ale_py
@@ -12,10 +11,7 @@ import glob
 from datetime import datetime
 from gymnasium.wrappers import RecordVideo
 import ale_py  # import the ale-py library
-# Fix: Import GreedyQPolicy from the correct location
-#from sb3_contrib.common.policies import GreedyQPolicy  
-from stable_baselines3.common.policies import BasePolicy #changed the import to the original location
-#from sb3_contrib.q_learning import GreedyQPolicy  
+
 
 def make_atari_env(env_id):
     """
@@ -39,7 +35,7 @@ def preprocess_observation(obs):
     return obs
 
 
-def record_video(env_name, model, num_episodes=10):
+def record_video(env_name, model, num_episodes=20):
     """
     Records gameplay video of the trained agent.
     """
@@ -64,8 +60,8 @@ def record_video(env_name, model, num_episodes=10):
 
         while not (done or truncated):
             obs = preprocess_observation(obs)  # Ensure correct shape
-            # Use GreedyQPolicy to select actions greedily
-            action, _states = model.predict(obs, deterministic=True)  
+            # Use the model's policy directly to select actions greedily
+            action, _states = model.predict(obs, deterministic=True)
 
             # The predict method is returning a scalar, so no need to index it.
             # If the predict method starts returning an array, this might need to be changed back
@@ -120,18 +116,7 @@ def merge_videos(video_dir, output_filename="merged_video.mp4", fps=30):
     return output_path
 
 
-def video_to_gif(video_path, gif_path, start_time=0, end_time=None, fps=10):
-    """
-    Converts the video to a GIF.
-    """
-    from moviepy.editor import VideoFileClip
-
-    video = VideoFileClip(video_path)
-    if end_time is not None:
-        video = video.subclip(start_time, end_time)
-    video.write_gif(gif_path, fps=fps)
-    print(f"GIF saved at {gif_path}")
-
+# removed display_gameplay function
 # Change _name_ to __name__
 if __name__ == "__main__":
     # Load the trained model
@@ -140,9 +125,6 @@ if __name__ == "__main__":
         raise FileNotFoundError(f"Model file not found: {model_path}")
     model = DQN.load(model_path, buffer_size=10000)
     print(f"Model loaded from {model_path}")
-
-    # Set the policy to GreedyQPolicy
-    #model.policy = GreedyQPolicy(model.policy) #this line is likely not necessary
 
     # Environment setup
     env_name = "ALE/Breakout-v5"
@@ -157,14 +139,11 @@ if __name__ == "__main__":
     if merged_video_path:
         print(f"Merged video available at: {merged_video_path}")
 
-    # Convert the merged video to a GIF
-    if merged_video_path:
-        gif_path = os.path.join(video_dir, "gameplay.gif")
-        video_to_gif(merged_video_path, gif_path, fps=15)
-        print(f"GIF saved at: {gif_path}")
+    # Removed real-time gameplay display
 
     # Display performance summary
     print("\n=== Performance Summary ===")
+    # print(f"Average reward (display): {np.mean(display_rewards):.2f}") #Removed as display_rewards is not calculated anymore
     print(f"Average reward (video): {np.mean(video_rewards):.2f}")
     print(f"Videos saved to: {video_dir}")
     if merged_video_path:
