@@ -41,6 +41,7 @@ def record_video(env_name, model, num_episodes=20):
     video_dir = f"./videos/{env_name.split('/')[-1]}{datetime.now().strftime('%Y%m%d%H%M%S')}"
     os.makedirs(video_dir, exist_ok=True)
 
+    # Create environment with RecordVideo wrapper
     env = make_atari_env(env_name)  # removed render_mode as env will not be rendered
     env = RecordVideo(
         env,
