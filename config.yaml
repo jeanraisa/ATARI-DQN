@@ -1,0 +1,18 @@
+epsilon:
+  decay: 0.995
+  end: 0.1
+  fraction: 0.2
+  start: 1.0
+env: ALE/Breakout-v5
+model:
+  buffer_size: 300000
+  lr: 0.002
+  policy_kwargs:
+    net_arch:
+    - 256
+    - 256
+training:
+  batch_size: 128
+  gamma: 0.99
+  num_timesteps: 10000
+  seed: 42
