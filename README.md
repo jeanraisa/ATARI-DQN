@@ -136,6 +136,6 @@ Moderate performance (Result 3) implies partial learning, but further optimizati
 
 # Contribution
 
-1. Xavier: Training and Model development( Developed the train script)
+1.  Dohessienkan Xavier Gnondoyi: Training and Model development( Developed the train script)
 2. Irakoze Jean Raisa: Developed the play script for Gameplay and evaluation and README Documentation
 3. Cynthia Nekesa: READMe Documentation and play script development
