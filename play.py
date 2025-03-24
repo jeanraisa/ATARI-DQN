@@ -13,6 +13,15 @@ from gymnasium.wrappers import RecordVideo
 import ale_py  # import the ale-py library
 
 
+def make_atari_env(env_id):
+    """
+    Create an Atari environment with proper wrappers.
+    Ensures RGB observations instead of grayscale.
+    """
+    env = gym.make(env_id, render_mode="rgb_array")
+    env = AtariWrapper(env)
+    return env
+
 def preprocess_observation(obs):
     """
     Ensures the observation is in the correct format (3, 210, 160).
@@ -32,12 +41,11 @@ def record_video(env_name, model, num_episodes=20):
     video_dir = f"./videos/{env_name.split('/')[-1]}{datetime.now().strftime('%Y%m%d%H%M%S')}"
     os.makedirs(video_dir, exist_ok=True)
 
-    # Create environment with RecordVideo wrapper
     env = make_atari_env(env_name)  # removed render_mode as env will not be rendered
     env = RecordVideo(
         env,
         video_folder=video_dir,
-        episode_trigger=lambda x: True,  # Record every episode
+        episode_trigger=lambda x: True,  
         name_prefix=f"{env_name.split('/')[-1]}"
     )
 
