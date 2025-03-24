@@ -67,7 +67,7 @@ python play.py
 
 The results indicate varying performance of the trained agent across different evaluation settings. Below is an analysis of each result:
 
-Avg Reward: 650.00, Avg Episode Length: 1439.0
+# 1. Avg Reward: 650.00, Avg Episode Length: 1439.0
 
 This result suggests a well-performing agent capable of surviving for a long time while maximizing rewards.
 
@@ -75,7 +75,7 @@ A long episode length (1439 steps) indicates that the agent makes informed decis
 
 The high reward suggests that the policy is well-optimized and effective.
 
-Avg Reward: 9.40, Avg Episode Length: 9.4
+# 2. Avg Reward: 9.40, Avg Episode Length: 9.4
 
 The agent is performing poorly, with very short episodes.
 
@@ -89,7 +89,7 @@ Potential issues with the exploration-exploitation balance.
 
 Further training or fine-tuning of hyperparameters (e.g., learning rate, epsilon decay) may be needed.
 
-Avg Reward: 200.00, Avg Episode Length: 572.0
+# 3. Avg Reward: 200.00, Avg Episode Length: 572.0
 
 This is a moderate performance—better than (2) and (4) but not as strong as (1).
 
@@ -97,7 +97,7 @@ The agent is able to sustain itself for a reasonable number of steps (572) and a
 
 The model has learned some useful policies but may require further training for improvement.
 
-Avg Reward: 9.50, Avg Episode Length: 9.5
+# 4. Avg Reward: 9.50, Avg Episode Length: 9.5
 
 Similar to (2), this result suggests an underperforming agent.
 
@@ -105,7 +105,7 @@ The short episode length indicates that the agent is failing early, possibly due
 
 The model might not be well-trained, or it could be stuck in a suboptimal policy.
 
-Key Takeaways & Recommendations
+# Key Takeaways & Recommendations
 
 Strong performance (Result 1) indicates a well-trained model with effective policy learning.
 
