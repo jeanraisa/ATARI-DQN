@@ -80,7 +80,9 @@ Playing with trained agent:
 
 python play.py
 
+# Hyperparameter Tuning
 
+![Table](https://github.com/jeanraisa/ATARI-DQN/blob/main/Table/table1.png)
 
 # Discussion on Results
 
