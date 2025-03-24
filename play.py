@@ -63,7 +63,9 @@ def record_video(env_name, model, num_episodes=20):
             # Use the model's policy directly to select actions greedily
             action, _states = model.predict(obs, deterministic=True)
 
-            
+            # The predict method is returning a scalar, so no need to index it.
+            # If the predict method starts returning an array, this might need to be changed back
+            # action = action[0]  # Extract action value from array
 
             if action >= env.action_space.n:  # Clip action if out of range
                 action = env.action_space.n - 1
