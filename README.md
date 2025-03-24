@@ -26,18 +26,18 @@ This project implements a Deep Q-Network (DQN) agent to play Atari's Breakout ga
 
   1. Clone this repository:
 
-  `git clone https://github.com/jeanraisa/ATARI-DQN.git
-  cd ATARI-DQN`
+  `git clone https://github.com/jeanraisa/ATARI-DQN.git`
+  `cd ATARI-DQN`
 
   2. Create and activate a virtual environment (recommended):
 
   # On Windows
-  `python -m venv venv
-  venv\Scripts\activate`
+  `python -m venv venv`
+  `venv\Scripts\activate`
 
  # On macOS/Linux
- `python3 -m venv venv
- source venv/bin/activate`
+ `python3 -m venv venv`
+ `source venv/bin/activate`
 
   3. Install required packages:
 
