@@ -1,3 +1,15 @@
+
+# DEMO
+
+
+
+
+
+https://github.com/user-attachments/assets/7bf6df2c-631e-4680-a3be-7cb59f9326e4
+
+
+
+
 # DQN Agent for Atari Breakout
 
 This project implements a Deep Q-Network (DQN) agent to play Atari's Breakout game using Stable-Baselines3 and Gymnasium. The implementation includes both training and evaluation scripts.
