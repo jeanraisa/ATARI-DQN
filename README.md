@@ -1,8 +1,8 @@
-DQN Agent for Atari Breakout
+# DQN Agent for Atari Breakout
 
 This project implements a Deep Q-Network (DQN) agent to play Atari's Breakout game using Stable-Baselines3 and Gymnasium. The implementation includes both training and evaluation scripts.
 
-Project Structure
+# Project Structure
 
 train.py: Script for training the DQN agent
 
@@ -10,7 +10,7 @@ play.py: Script for running the trained agent
 
 requirements.txt: List of required packages
 
-Prerequisites
+# Prerequisites
 
 System Requirements
 
@@ -51,7 +51,7 @@ Install required packages:
 
 pip install gymnasium[atari] stable-baselines3[extra] ale-py
 
-Usage
+# Usage
 
 Training the agent:
 
@@ -61,21 +61,9 @@ Playing with trained agent:
 
 python play.py
 
-Training Configuration
 
-Learning rate:
 
-Buffer size:
-
-Batch size: 32
-
-Gamma:
-
-Exploration fraction: 0.1
-
-Training steps:
-
-Discussion on Results
+# Discussion on Results
 
 The results indicate varying performance of the trained agent across different evaluation settings. Below is an analysis of each result:
 
