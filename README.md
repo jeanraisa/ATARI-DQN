@@ -133,3 +133,9 @@ Strong performance (Result 1) indicates a well-trained model with effective poli
 Very low performance (Results 2 & 4) suggests either poor training, lack of exploration, or failure in learning a stable policy.
 
 Moderate performance (Result 3) implies partial learning, but further optimization (e.g., more training steps, adjusting the reward function) is needed.
+
+# Contribution
+
+1. Xavier: Training and Model development( Developed the train script)
+2. Irakoze Jean Raisa: Developed the play script for Gameplay and evaluation and README Documentation
+3. Cynthia Nekesa: READMe Documentation and play script development
