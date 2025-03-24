@@ -13,17 +13,6 @@ from gymnasium.wrappers import RecordVideo
 import ale_py  # import the ale-py library
 
 
-def make_atari_env(env_id):
-    """
-    Create an Atari environment with proper wrappers.
-    Ensures RGB observations instead of grayscale.
-    """
-    # Set render_mode to "rgb_array" for RecordVideo
-    env = gym.make(env_id, render_mode="rgb_array")
-    env = AtariWrapper(env)
-    return env
-
-
 def preprocess_observation(obs):
     """
     Ensures the observation is in the correct format (3, 210, 160).
