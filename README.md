@@ -9,6 +9,9 @@
 ![gameplay](https://github.com/user-attachments/assets/2750ab15-1b0a-4c70-8e53-ecbf9eda6bfe)
 
 
+![gameplay](https://github.com/jeanraisa/ATARI-DQN/blob/main/videos/merged_video%20(1)%20true.mp4)
+
+
 
 
 
