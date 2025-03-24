@@ -6,7 +6,8 @@
 
 
 
-https://github.com/user-attachments/assets/11646dcb-07c0-4b4f-850f-6d71102e7e2f
+![gameplay](https://github.com/user-attachments/assets/2750ab15-1b0a-4c70-8e53-ecbf9eda6bfe)
+
 
 
 
