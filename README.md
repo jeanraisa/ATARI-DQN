@@ -14,6 +14,64 @@
 
 
 
+# 1. Learning Rate (lr=0.0005)
+The learning rate controls how much the model updates its weights during training.
+
+Impact:
+
+A lower learning rate (e.g., 0.0001) leads to slower learning but more stability.
+
+A higher learning rate (e.g., 0.01) can speed up learning but may cause instability.
+
+0.0005 is a reasonable balance, allowing steady convergence without drastic updates.
+
+# 2. Discount Factor (gamma=0.97)
+Gamma (γ) determines how much future rewards matter compared to immediate rewards.
+
+Impact:
+
+If γ = 0, the agent only cares about immediate rewards (myopic behavior).
+
+If γ = 1, the agent considers all future rewards equally (long-term planning).
+
+0.97 gives high importance to future rewards while still valuing immediate rewards. This helps the agent make smarter, long-term decisions.
+
+# 3. Batch Size (batch_size=64)
+The number of past experiences sampled from the replay buffer for each update.
+
+Impact:
+
+Smaller batches (e.g., 32) lead to more frequent updates but may result in high variance.
+
+Larger batches (e.g., 128 or 256) provide more stable updates but require more memory and slow down training.
+
+64 is a common choice, balancing efficiency and stability.
+
+# 4. Exploration-Exploitation Tradeoff (Epsilon Parameters)
+Epsilon (ε) governs the balance between exploration (trying new actions) and exploitation (using learned actions).
+
+Epsilon Start (epsilon_start=1)
+
+Starts with pure exploration (100% random actions).
+
+Ensures the agent gathers diverse experiences early in training.
+
+Epsilon End (epsilon_end=0.1)
+
+The final probability of taking a random action.
+
+Ensures the agent still explores a little after training.
+
+Epsilon Decay (epsilon_decay=20000)
+
+Controls how fast the agent shifts from exploration to exploitation.
+
+Higher decay (e.g., 50,000) → Exploration lasts longer.
+
+Lower decay (e.g., 5,000) → Exploitation starts too soon.
+
+20000 is a moderate setting, meaning the agent gradually transitions to exploitation.
+
 
 
 
